@@ -13,15 +13,20 @@ public class Solution2 {
         int right = nums.length - 1;
 
         while (left < right) {
-            if (nums[left] + nums[right] > target) {
-                right--;
-            } else if (nums[left] + nums[right] < target) {
-                left++;
-            } else
-                return new int[]{left, right};
-        }
-        return new int[]{left, right};
-    }
 
+            int sum = nums[left] + nums[right];
+
+            if (sum == target) {
+                return new int[]{left, right};
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return new int[0];
+
+}
 }
 
