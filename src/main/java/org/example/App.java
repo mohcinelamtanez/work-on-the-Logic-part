@@ -11,5 +11,7 @@ public class App
 
         int nums[] = {2 , 4 , 4 , 6 , 10} ;
         System.out.println(Solution1.maxSumSubArrayOfSizek(nums , 3)) ;
+
+        System.out.println(Solution2.twoSumMethod(nums , 10)) ;
     }
 }
